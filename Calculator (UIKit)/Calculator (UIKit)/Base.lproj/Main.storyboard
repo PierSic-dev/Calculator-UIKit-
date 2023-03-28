@@ -258,11 +258,14 @@
                                                     <constraint firstAttribute="width" secondItem="3Sp-uX-mv7" secondAttribute="height" multiplier="1:1" id="XHh-gH-2zk"/>
                                                 </constraints>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="filled" title="," cornerStyle="capsule" titleAlignment="leading">
+                                                <buttonConfiguration key="configuration" style="filled" title="." cornerStyle="capsule" titleAlignment="leading">
                                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="30"/>
                                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <color key="baseBackgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="commaButtonPressed:" destination="zd4-ml-vAt" eventType="touchUpInside" id="YSa-BZ-QUY"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="btA-uu-xZ8" userLabel="Equal">
                                                 <rect key="frame" x="274.66666666666669" y="0.0" width="86.333333333333314" height="86.333333333333329"/>
@@ -302,7 +305,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="resultLabel" destination="lfn-if-sHN" id="LTk-HN-ISI"/>
+                        <outlet property="label" destination="lfn-if-sHN" id="LTk-HN-ISI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ttl-zj-aoJ" sceneMemberID="firstResponder"/>

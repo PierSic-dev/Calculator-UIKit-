@@ -8,10 +8,11 @@
 import UIKit
 
 class ViewController: UIViewController {
-    @IBOutlet weak var resultLabel: UILabel!
+    @IBOutlet weak var label: UILabel!
     var firstNumber = 0.0
     var operation: Operation = .addition
     var secondNumber = 0.0
+    var hasComma = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,44 +25,53 @@ class ViewController: UIViewController {
     
     @IBAction func numberButtonPressed(_ sender: UIButton) {
         let buttonNumber = sender.titleLabel!.text!
-        let currentNumber = resultLabel.text!
+        let currentNumber = label.text!
         
         // avoid the creation of a long string of zeros
         if currentNumber == "0" && buttonNumber != "0" {
-            resultLabel.text! = buttonNumber
+            label.text! = buttonNumber
         } else if currentNumber != "0" {
-            resultLabel.text! += buttonNumber
+            label.text! += buttonNumber
         }
     }
     
     @IBAction func operationButtonPressed(_ sender: UIButton) {
-        firstNumber = Double(resultLabel.text!) ?? 0.0
-        print("op started, 1st = \(firstNumber)")
         let buttonOperation = sender.titleLabel!.text!
         
         switch buttonOperation {
         case "+":
+            firstNumber = Double(label.text!) ?? 0.0
             operation = .addition
             clearInput()
         case "-":
+            firstNumber = Double(label.text!) ?? 0.0
             operation = .subtraction
             clearInput()
         case "×":
+            firstNumber = Double(label.text!) ?? 0.0
             operation = .multiplication
             clearInput()
         case "÷":
+            firstNumber = Double(label.text!) ?? 0.0
             operation = .division
             clearInput()
         case "=":
-            secondNumber = Double(resultLabel.text!) ?? 0.0
+            secondNumber = Double(label.text!) ?? 0.0
             calculate()
         default:
             fatalError("Unknown operation")
         }
     }
     
+    @IBAction func commaButtonPressed(_ sender: UIButton) {
+        // FIXME: it is still possible to add a second comma
+        if !hasComma {
+            label.text! += "."
+            hasComma = true
+        }
+    }
+    
     func calculate() {
-        print("1st = \(firstNumber) | 2nd = \(secondNumber)")
         var result = 0.0
         switch operation {
         case .addition:
@@ -78,13 +88,15 @@ class ViewController: UIViewController {
         
         // check if there are any decimals
         if result.truncatingRemainder(dividingBy: 1) == 0 {
-            resultLabel.text! = String(Int(result))
+            label.text! = String(Int(result))
+        } else {
+            label.text! = String(result)
         }
-        print("new 1st = \(firstNumber)")
     }
     
     func clearInput() {
-        resultLabel.text! = "0"
+        label.text! = "0"
+        hasComma = false
     }
     
     enum Operation {
