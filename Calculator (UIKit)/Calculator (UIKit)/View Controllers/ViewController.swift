@@ -70,15 +70,12 @@ class ViewController: UIViewController {
     }
     
     @IBAction func signButtonPressed(_ sender: UIButton) {
-        if label.text!.contains(".") {
-            var currentNumber = Double(label.text!)!
-            currentNumber *= -1
-            label.text! = String(currentNumber)
+        if !label.text!.contains(".") {
+            label.text! = swapSign(number: Int(label.text!)!)
         } else {
-            var currentNumber = Int(label.text!)!
-            currentNumber *= -1
-            label.text! = String(currentNumber)
+            label.text! = swapSign(number: Double(label.text!)!)
         }
+        
     }
     
     func calculate() {
@@ -106,6 +103,25 @@ class ViewController: UIViewController {
     
     func clearInput() {
         label.text! = "0"
+    }
+    
+    func swapSign<N: Numeric>(number: N) -> String {
+        let swappedNumber = number * -1
+        
+        if let intValue = swappedNumber as? Int {
+            return String(intValue)
+        } else {
+            let doubleValue = swappedNumber as! Double
+            return String(doubleValue)
+        }
+    }
+    
+    func swapColors(button: UIButton) {
+        var button = button.configuration
+        let foregroundColor = button?.baseForegroundColor
+        let backgroundColor = button?.baseBackgroundColor
+        button?.baseForegroundColor = backgroundColor
+        button?.baseBackgroundColor = foregroundColor
     }
     
     enum Operation {

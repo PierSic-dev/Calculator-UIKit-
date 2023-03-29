@@ -267,7 +267,7 @@
                                                     <color key="baseBackgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <action selector="commaButtonPressed:" destination="zd4-ml-vAt" eventType="touchUpInside" id="YSa-BZ-QUY"/>
+                                                    <action selector="dotButtonPressed:" destination="zd4-ml-vAt" eventType="touchUpInside" id="AQy-V3-4Nh"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="btA-uu-xZ8" userLabel="Equal">
