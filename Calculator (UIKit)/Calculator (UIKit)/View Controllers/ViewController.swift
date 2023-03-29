@@ -69,6 +69,18 @@ class ViewController: UIViewController {
         }
     }
     
+    @IBAction func signButtonPressed(_ sender: UIButton) {
+        if label.text!.contains(".") {
+            var currentNumber = Double(label.text!)!
+            currentNumber *= -1
+            label.text! = String(currentNumber)
+        } else {
+            var currentNumber = Int(label.text!)!
+            currentNumber *= -1
+            label.text! = String(currentNumber)
+        }
+    }
+    
     func calculate() {
         var result = 0.0
         switch operation {
