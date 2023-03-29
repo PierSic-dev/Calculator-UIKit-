@@ -12,7 +12,6 @@ class ViewController: UIViewController {
     var firstNumber = 0.0
     var operation: Operation = .addition
     var secondNumber = 0.0
-    var hasComma = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,6 +35,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func operationButtonPressed(_ sender: UIButton) {
+        // TODO: calculate and display the result when concatenating operations (ex 3+3+3=9)
         let buttonOperation = sender.titleLabel!.text!
         
         switch buttonOperation {
@@ -63,11 +63,9 @@ class ViewController: UIViewController {
         }
     }
     
-    @IBAction func commaButtonPressed(_ sender: UIButton) {
-        // FIXME: it is still possible to add a second comma
-        if !hasComma {
+    @IBAction func dotButtonPressed(_ sender: UIButton) {
+        if !(label.text!.contains(".")) {
             label.text! += "."
-            hasComma = true
         }
     }
     
@@ -96,7 +94,6 @@ class ViewController: UIViewController {
     
     func clearInput() {
         label.text! = "0"
-        hasComma = false
     }
     
     enum Operation {
