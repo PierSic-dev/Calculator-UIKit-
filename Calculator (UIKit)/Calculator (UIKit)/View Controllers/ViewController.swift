@@ -116,6 +116,7 @@ class ViewController: UIViewController {
         }
     }
     
+    // Testing for button pressed animation
     func swapColors(button: UIButton) {
         var button = button.configuration
         let foregroundColor = button?.baseForegroundColor

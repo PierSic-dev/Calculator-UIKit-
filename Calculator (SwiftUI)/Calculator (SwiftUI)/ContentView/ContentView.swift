@@ -14,13 +14,17 @@ struct ContentView: View {
                 Spacer()
                     .frame(
                         width: geo.size.width,
-                        height: geo.size.height * 0.25
+                        height: geo.size.height * 0.20
                     )
                 Text("0")
+                    .padding()
                     .frame(
                         width: geo.size.width,
-                        height: geo.size.height * 0.10
+                        height: geo.size.height * 0.15,
+                        alignment: .trailing
                     )
+                    .font(.system(size: 300))
+                    .minimumScaleFactor(0.01)
                 KeyboardView()
                     .padding()
                     .frame(

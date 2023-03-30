@@ -15,7 +15,13 @@ struct KeyboardView: View {
                     print("code missing")
                 } label: {
                     Text("AC")
-                        .frame(maxWidth: .infinity, maxHeight: .infinity)
+                        .frame(
+                            maxWidth: .infinity,
+                            maxHeight: .infinity,
+                            alignment: .leading
+                        )
+                        .font(.system(size: 300))
+                        .minimumScaleFactor(0.01)
                 }
                 .buttonStyle(DefaultWide())
                 .gridCellColumns(2)
@@ -24,6 +30,8 @@ struct KeyboardView: View {
                 } label: {
                     Text("+/-")
                         .frame(maxWidth: .infinity, maxHeight: .infinity)
+                        .font(.system(size: 300))
+                        .minimumScaleFactor(0.01)
                 }
                 .buttonStyle(Default())
                 Button {
@@ -31,6 +39,8 @@ struct KeyboardView: View {
                 } label: {
                     Text("÷")
                         .frame(maxWidth: .infinity, maxHeight: .infinity)
+                        .font(.system(size: 300))
+                        .minimumScaleFactor(0.01)
                 }
                 .buttonStyle(Operation())
             }
@@ -41,6 +51,8 @@ struct KeyboardView: View {
                 } label: {
                     Text("7")
                         .frame(maxWidth: .infinity, maxHeight: .infinity)
+                        .font(.system(size: 300))
+                        .minimumScaleFactor(0.01)
                 }
                 .buttonStyle(Default())
                 Button {
@@ -48,6 +60,8 @@ struct KeyboardView: View {
                 } label: {
                     Text("8")
                         .frame(maxWidth: .infinity, maxHeight: .infinity)
+                        .font(.system(size: 300))
+                        .minimumScaleFactor(0.01)
                 }
                 .buttonStyle(Default())
                 Button {
@@ -55,6 +69,8 @@ struct KeyboardView: View {
                 } label: {
                     Text("9")
                         .frame(maxWidth: .infinity, maxHeight: .infinity)
+                        .font(.system(size: 300))
+                        .minimumScaleFactor(0.01)
                 }
                 .buttonStyle(Default())
                 Button {
@@ -62,6 +78,8 @@ struct KeyboardView: View {
                 } label: {
                     Text("×")
                         .frame(maxWidth: .infinity, maxHeight: .infinity)
+                        .font(.system(size: 300))
+                        .minimumScaleFactor(0.01)
                 }
                 .buttonStyle(Operation())
             }
@@ -72,6 +90,8 @@ struct KeyboardView: View {
                 } label: {
                     Text("4")
                         .frame(maxWidth: .infinity, maxHeight: .infinity)
+                        .font(.system(size: 300))
+                        .minimumScaleFactor(0.01)
                 }
                 .buttonStyle(Default())
                 Button {
@@ -79,6 +99,8 @@ struct KeyboardView: View {
                 } label: {
                     Text("5")
                         .frame(maxWidth: .infinity, maxHeight: .infinity)
+                        .font(.system(size: 300))
+                        .minimumScaleFactor(0.01)
                 }
                 .buttonStyle(Default())
                 Button {
@@ -86,6 +108,8 @@ struct KeyboardView: View {
                 } label: {
                     Text("6")
                         .frame(maxWidth: .infinity, maxHeight: .infinity)
+                        .font(.system(size: 300))
+                        .minimumScaleFactor(0.01)
                 }
                 .buttonStyle(Default())
                 Button {
@@ -93,6 +117,8 @@ struct KeyboardView: View {
                 } label: {
                     Text("-")
                         .frame(maxWidth: .infinity, maxHeight: .infinity)
+                        .font(.system(size: 300))
+                        .minimumScaleFactor(0.01)
                 }
                 .buttonStyle(Operation())
             }
@@ -103,6 +129,8 @@ struct KeyboardView: View {
                 } label: {
                     Text("1")
                         .frame(maxWidth: .infinity, maxHeight: .infinity)
+                        .font(.system(size: 300))
+                        .minimumScaleFactor(0.01)
                 }
                 .buttonStyle(Default())
                 Button {
@@ -110,6 +138,8 @@ struct KeyboardView: View {
                 } label: {
                     Text("2")
                         .frame(maxWidth: .infinity, maxHeight: .infinity)
+                        .font(.system(size: 300))
+                        .minimumScaleFactor(0.01)
                 }
                 .buttonStyle(Default())
                 Button {
@@ -117,6 +147,8 @@ struct KeyboardView: View {
                 } label: {
                     Text("3")
                         .frame(maxWidth: .infinity, maxHeight: .infinity)
+                        .font(.system(size: 300))
+                        .minimumScaleFactor(0.01)
                 }
                 .buttonStyle(Default())
                 Button {
@@ -124,6 +156,8 @@ struct KeyboardView: View {
                 } label: {
                     Text("+")
                         .frame(maxWidth: .infinity, maxHeight: .infinity)
+                        .font(.system(size: 300))
+                        .minimumScaleFactor(0.01)
                 }
                 .buttonStyle(Operation())
             }
@@ -133,7 +167,13 @@ struct KeyboardView: View {
                     print("code missing")
                 } label: {
                     Text("0")
-                        .frame(maxWidth: .infinity, maxHeight: .infinity)
+                        .frame(
+                            maxWidth: .infinity,
+                            maxHeight: .infinity,
+                            alignment: .leading
+                        )
+                        .font(.system(size: 300))
+                        .minimumScaleFactor(0.01)
                 }
                 .buttonStyle(DefaultWide())
                 .gridCellColumns(2)
@@ -142,6 +182,8 @@ struct KeyboardView: View {
                 } label: {
                     Text(".")
                         .frame(maxWidth: .infinity, maxHeight: .infinity)
+                        .font(.system(size: 300))
+                        .minimumScaleFactor(0.01)
                 }
                 .buttonStyle(Default())
                 Button {
@@ -149,6 +191,8 @@ struct KeyboardView: View {
                 } label: {
                     Text("=")
                         .frame(maxWidth: .infinity, maxHeight: .infinity)
+                        .font(.system(size: 300))
+                        .minimumScaleFactor(0.01)
                 }
                 .buttonStyle(Operation())
                 .frame(maxWidth: .infinity, maxHeight: .infinity)

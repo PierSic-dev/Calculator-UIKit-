@@ -10,6 +10,7 @@ import SwiftUI
 struct Default: ButtonStyle {
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
+            .bold()
             .padding()
             .foregroundColor(.white)
             .background(Color(uiColor: UIColor.darkGray))
@@ -21,6 +22,7 @@ struct Default: ButtonStyle {
 struct Operation: ButtonStyle {
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
+            .bold()
             .padding()
             .foregroundColor(.white)
             .background(.orange)
@@ -32,6 +34,7 @@ struct Operation: ButtonStyle {
 struct DefaultWide: ButtonStyle {
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
+            .bold()
             .padding()
             .foregroundColor(.white)
             .background(Color(uiColor: UIColor.darkGray))
