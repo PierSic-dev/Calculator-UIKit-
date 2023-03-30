@@ -14,6 +14,7 @@ struct Default: ButtonStyle {
             .foregroundColor(.white)
             .background(Color(uiColor: UIColor.darkGray))
             .clipShape(Circle())
+            .aspectRatio(1, contentMode: .fit)
     }
 }
 
@@ -24,5 +25,17 @@ struct Operation: ButtonStyle {
             .foregroundColor(.white)
             .background(.orange)
             .clipShape(Circle())
+            .aspectRatio(1, contentMode: .fit)
+    }
+}
+
+struct DefaultWide: ButtonStyle {
+    func makeBody(configuration: Configuration) -> some View {
+        configuration.label
+            .padding()
+            .foregroundColor(.white)
+            .background(Color(uiColor: UIColor.darkGray))
+            .clipShape(Capsule())
+            .aspectRatio(2, contentMode: .fit)
     }
 }
